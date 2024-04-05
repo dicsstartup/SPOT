@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/add_evento_background"
+    android:foreground="@android:drawable/button_onoff_indicator_off"
+    android:foregroundGravity="top|center|clip_vertical"
+    android:foregroundTint="#BE737070"
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/add_reunion_comentarios"
+        android:layout_width="match_parent"
+        android:layout_height="81dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_edit_comentarios"
+        android:backgroundTint="#151515"
+        android:elevation="4dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Comentarios"
+        android:inputType="textMultiLine"
+        android:paddingStart="15dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAñadirReunion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,HardcodedText,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Nuevo Reunion"
+        android:textColor="@color/amarillo"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tituloHora"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fechaReunion"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="30dp"
+        android:text="Seleccione fecha"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/add_reunion_comentarios"
+        app:layout_constraintStart_toStartOf="@+id/tituloHora" />
+
+    <TextView
+        android:id="@+id/tituloHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="Fecha y hora"
+        android:textColor="@color/amarillo"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/fechaReunion"
+        app:layout_constraintStart_toStartOf="@+id/titulo" />
+
+    <Button
+        android:id="@+id/buttonAñadirReunion"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/background_btn_green"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:text="Añadir"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/horaReunion"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="Seleccione hora"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/fechaReunion"
+        app:layout_constraintStart_toEndOf="@+id/fechaReunion"
+        app:layout_constraintTop_toTopOf="@+id/fechaReunion" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/nocolor"
+        android:scaleType="centerInside"
+        android:tint="@color/error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_delete_24"
+        tools:ignore="SpeakableTextPresentCheck,UseAppTint" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

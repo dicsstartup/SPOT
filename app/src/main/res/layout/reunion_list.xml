@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_edit_comentarios"
+    android:backgroundTint="@color/negro">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarReunion"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="3dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/diaReunion"
+        app:layout_constraintTop_toTopOf="@+id/diaReunion"
+        app:shapeAppearanceOverlay="@style/Theme.AppSpot.ImageViewShapeAppearanceOverlay"
+        app:srcCompat="@drawable/add_friend"
+        tools:ignore="ContentDescription,ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/diaReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="01"
+        android:textColor="@color/amarillo"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/horaReunionList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="06:34"
+        android:textColor="@color/amarillo"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/mesReunion"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/mesReunion"
+        app:layout_constraintTop_toBottomOf="@+id/mesReunion"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/userNameReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="#Usuario"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/avatarReunion"
+        app:layout_constraintStart_toEndOf="@+id/avatarReunion"
+        app:layout_constraintTop_toTopOf="@+id/avatarReunion" />
+
+    <TextView
+        android:id="@+id/descripcionReunion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:text="descripcion del lugar"
+        android:textColor="@color/colorSpinnerItemSelected"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView25"
+        app:layout_constraintEnd_toStartOf="@+id/accionReunion"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/avatarReunion"
+        app:layout_constraintTop_toBottomOf="@+id/avatarReunion"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Asistencias:"
+        android:textColor="@color/amarillo"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/descripcionReunion" />
+
+    <TextView
+        android:id="@+id/asistenciasReunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="00"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintStart_toEndOf="@+id/textView25"
+        app:layout_constraintTop_toTopOf="@+id/textView25" />
+
+    <ImageView
+        android:id="@+id/accionReunion"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/userNameReunion"
+        app:srcCompat="@drawable/events"
+        tools:srcCompat="@drawable/events" />
+
+    <TextView
+        android:id="@+id/mesReunion"
+        android:layout_width="38dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="-10dp"
+        android:gravity="center"
+        android:text="Mayo"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/diaReunion"
+        app:layout_constraintStart_toStartOf="@+id/diaReunion"
+        app:layout_constraintTop_toBottomOf="@+id/diaReunion" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="~"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/userNameReunion"
+        app:layout_constraintTop_toTopOf="@+id/userNameReunion" />
+
+    <TextView
+        android:id="@+id/tipospot_reunion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="SPOT"
+        android:textColor="@color/amarillo"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toTopOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/nombrespot_reunion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="Macba"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/accionReunion"
+        app:layout_constraintStart_toEndOf="@+id/tipospot_reunion"
+        app:layout_constraintTop_toTopOf="@+id/tipospot_reunion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

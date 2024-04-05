@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    tools:context=".app.spot.SpotActivity">
+
+    <TextView
+        android:id="@+id/spot_nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:text="@string/nombre"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:autoSizeMinTextSize="17sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/regresSpot"
+        app:layout_constraintEnd_toStartOf="@+id/ciudad_spot"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/regresSpot"
+        app:layout_constraintTop_toTopOf="@+id/regresSpot"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tipo_spot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/archivonarrow_medium"
+        android:text="Tipo de Spot"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ciudad_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="3dp"
+        android:text="Ciudad"
+        android:textColor="@color/white"
+        app:autoSizeMinTextSize="8sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/tipo_spot" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="22dp"
+        android:layout_height="21dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/like_spot"
+        app:layout_constraintEnd_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/like_spot"
+        app:srcCompat="@drawable/icon_like" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="16dp"
+        android:layout_height="19dp"
+        app:layout_constraintEnd_toEndOf="@+id/tipo_spot"
+        app:layout_constraintTop_toTopOf="@+id/ciudad_spot"
+        app:srcCompat="@drawable/icon_ubic" />
+
+    <TextView
+        android:id="@+id/like_spot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="3dp"
+        android:text="Like"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/ciudad_spot" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/like_spot" />
+
+    <ImageView
+        android:id="@+id/ButtonLike_spot"
+        android:layout_width="95dp"
+        android:layout_height="91dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/images_spot"
+        app:srcCompat="@drawable/icon_not_like" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/images_spot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/background_edit_comentarios"
+        android:backgroundTint="#151515"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/creador_spot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/archivonarrow_bold"
+            android:gravity="top"
+            android:text="Nombre"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/spot_avatar"
+            app:layout_constraintStart_toEndOf="@+id/spot_avatar"
+            app:layout_constraintTop_toTopOf="@+id/spot_avatar"
+            app:layout_constraintVertical_bias="0.272"
+            tools:ignore="TextSizeCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/spot_avatar"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Theme.AppSpot.ImageViewShapeAppearanceOverlay"
+            tools:ignore="ContentDescription,ImageContrastCheck"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/des_spot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="15dp"
+            android:text="Descripcion"
+            android:textColor="@color/colorSpinnerItemSelected"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/creador_spot"
+            app:layout_constraintTop_toBottomOf="@+id/creador_spot" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Tags"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/botonCambio_spot"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tags_spot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:layout_marginEnd="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/botonCambio_spot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/botonCambio_spot" />
+
+        <ImageView
+            android:id="@+id/botonCambio_spot"
+            android:layout_width="30dp"
+            android:layout_height="31dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="17dp"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/botonera_spot"
+            app:srcCompat="@drawable/baseline_navigate_next_24" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/botonera_spot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/botonCambio_spot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/botonCambio_spot"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:id="@+id/spot_comentar"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView17"
+                app:layout_constraintEnd_toStartOf="@+id/spot_calendario"
+                app:layout_constraintTop_toTopOf="@+id/spot_calendario"
+                app:srcCompat="@drawable/comments" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Comentar"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spot_comentar"
+                app:layout_constraintStart_toStartOf="@+id/spot_comentar" />
+
+            <ImageView
+                android:id="@+id/spot_googlemaps"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+
+                app:layout_constraintBottom_toTopOf="@+id/textView21"
+                app:layout_constraintEnd_toStartOf="@+id/spot_reportar"
+                app:layout_constraintTop_toTopOf="@+id/spot_reportar"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/icon_google_maps" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Google Maps"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spot_googlemaps"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/spot_googlemaps" />
+
+            <ImageView
+                android:id="@+id/spot_calendario"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/textView24"
+                app:layout_constraintEnd_toStartOf="@+id/spot_googlemaps"
+                app:layout_constraintTop_toTopOf="@+id/spot_googlemaps"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/events_add" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Reunion"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spot_calendario"
+                app:layout_constraintStart_toStartOf="@+id/spot_calendario" />
+
+            <TextView
+                android:id="@+id/textViewreport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="5dp"
+                android:text="Reportar"
+                android:textColor="#FF0700"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/spot_reportar"
+                app:layout_constraintHorizontal_bias="0.437"
+                app:layout_constraintStart_toStartOf="@+id/spot_reportar" />
+
+            <ImageView
+                android:id="@+id/spot_reportar"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="3dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewreport"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/report_icon" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="389dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="#151515"
+            app:layout_constraintBottom_toTopOf="@+id/textView20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/des_spot" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:text="Reuniones esta semana"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/eventos_spot"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventos_spot"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/regresSpot"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/nocolor"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/divider2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quantum_ic_arrow_back_grey600_24"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chat1"
+        android:title="Solicitudes" />
+    <item
+        android:id="@+id/chat2"
+        android:title="Crear Grupo"
+      />
+    <item
+        android:id="@+id/chat3"
+        android:title="Lista de amigos" />
+
+</menu>

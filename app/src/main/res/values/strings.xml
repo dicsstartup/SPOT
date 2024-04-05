@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">SPOT</string>
+    <string name="todo">TODO</string>
+    <string name="des">TODO</string>
+    <string name="nombre">SPOT</string>
+    <string name="email">Email</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="recordar_usuario">Recordar usuario</string>
+    <string name="login">LOGIN</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="registrate">Registrate</string>
+    <string name="provincias">Provincias</string>
+    <string name="invalid_email">Email invalido</string>
+    <string name="invalid_pass">Ingrese un password mayor a 6 y sin espacios</string>
+    <string name="invalid_passC">la Contraseña no concuerda</string>
+    <string name="invalid">Vacio o muy pocos caracteres</string>
+    <string name="tags">Cada tag debe tener un # al inicio</string>
+    <string name="espacio">hay espacios</string>
+    <string name="SPOT_pref">SPOT_Preferencia_login</string>
+    <string name="url_avatar_F">https://api.dicebear.com/5.x/avataaars/png?backgroundColor=365C19&amp;clothing=shirtCrewNeck&amp;eyebrows=default&amp;eyes=default&amp;mouth=default&amp;top=curvy&amp;clothesColor=e6e6e6</string>
+    <string name="url_avatar_M">https://api.dicebear.com/5.x/avataaars/png?backgroundColor=365C19&amp;clothing=shirtCrewNeck&amp;eyebrows=default&amp;eyes=default&amp;mouth=default&amp;top=dreads01&amp;hairColor=2c1b18&amp;clothesColor=e6e6e6</string>
+    <string name="reunion">Reunion</string>
+    <string name="err_much">Muchos caracteres</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="jsonMapa">[
+    {
+      \"featureType\": \"all\",
+      \"elementType\": \"geometry\",
+      \"stylers\": [
+        {
+          \"color\": \"#242f3e\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"all\",
+      \"elementType\": \"labels.text.stroke\",
+      \"stylers\": [
+        {
+          \"lightness\": -80
+        }
+      ]
+    },
+    {
+      \"featureType\": \"administrative\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#746855\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"administrative.locality\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#d59563\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"poi\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#d59563\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"poi.park\",
+      \"elementType\": \"geometry\",
+      \"stylers\": [
+        {
+          \"color\": \"#263c3f\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"poi.park\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#6b9a76\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road\",
+      \"elementType\": \"geometry.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#2b3544\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#9ca5b3\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.arterial\",
+      \"elementType\": \"geometry.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#38414e\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.arterial\",
+      \"elementType\": \"geometry.stroke\",
+      \"stylers\": [
+        {
+          \"color\": \"#212a37\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.highway\",
+      \"elementType\": \"geometry.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#746855\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.highway\",
+      \"elementType\": \"geometry.stroke\",
+      \"stylers\": [
+        {
+          \"color\": \"#1f2835\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.highway\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#f3d19c\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.local\",
+      \"elementType\": \"geometry.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#38414e\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"road.local\",
+      \"elementType\": \"geometry.stroke\",
+      \"stylers\": [
+        {
+          \"color\": \"#212a37\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"transit\",
+      \"elementType\": \"geometry\",
+      \"stylers\": [
+        {
+          \"color\": \"#2f3948\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"transit.station\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#d59563\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"water\",
+      \"elementType\": \"geometry\",
+      \"stylers\": [
+        {
+          \"color\": \"#17263c\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"water\",
+      \"elementType\": \"labels.text.fill\",
+      \"stylers\": [
+        {
+          \"color\": \"#515c6d\"
+        }
+      ]
+    },
+    {
+      \"featureType\": \"water\",
+      \"elementType\": \"labels.text.stroke\",
+      \"stylers\": [
+        {
+          \"lightness\": -20
+        }
+      ]
+    }
+  ]</string>
+    <string name="title_activity_me_gusta">MeGustaActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

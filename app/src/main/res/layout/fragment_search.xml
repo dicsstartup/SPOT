@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.spot.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="323dp"
+                android:layout_height="45dp"
+                android:background="@drawable/background_edit"
+                android:ems="10"
+                android:fontFamily="@font/ounded1c_medium"
+                android:hint="Busqueda"
+                android:inputType="textPersonName"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/amarillo"
+                android:textColorHighlight="#7487DD3C"
+                android:textColorHint="@color/amarillo"
+                android:textColorLink="#7487DD3C"
+                tools:ignore="Autofill,HardcodedText,LabelFor" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                app:icon="@drawable/icon_search"
+                app:iconGravity="textStart"
+                app:iconPadding="1dp"
+                app:iconSize="20dp"
+                app:iconTint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</FrameLayout>

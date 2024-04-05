@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/negro">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/avatarSolicitud"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:shapeAppearanceOverlay="@style/Theme.AppSpot.ImageViewShapeAppearanceOverlay"
+        app:srcCompat="@drawable/add_friend" />
+
+    <TextView
+        android:id="@+id/nombreSolicitud"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Nombre"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avatarSolicitud"
+        app:layout_constraintTop_toTopOf="@+id/avatarSolicitud" />
+
+    <Button
+        android:id="@+id/aceptarSolicitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:text="Aceptar"
+        android:textColor="@color/negro"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rechazarSolicitud"
+        app:layout_constraintTop_toBottomOf="@+id/nombreSolicitud" />
+
+    <Button
+        android:id="@+id/rechazarSolicitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorSpinnerItemSelected"
+        android:text="Rechazar"
+        android:textColor="@color/negro"
+        app:iconTint="@color/colorSpinnerItemSelected"
+        app:layout_constraintBottom_toBottomOf="@+id/aceptarSolicitud"
+        app:layout_constraintEnd_toEndOf="@+id/nombreSolicitud"
+        app:layout_constraintTop_toTopOf="@+id/aceptarSolicitud" />
+
+    <TextView
+        android:id="@+id/EstadoSolicitud"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/amarillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nombreSolicitud"
+        app:layout_constraintTop_toBottomOf="@+id/nombreSolicitud" />
+</androidx.constraintlayout.widget.ConstraintLayout>

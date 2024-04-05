@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/spots"
+        android:icon="@drawable/icon_home"
+        android:title="Home"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/chat_icon"
+        android:title="Chat" />
+    <item android:id="@+id/newSpot"
+        android:icon="@drawable/icon_new_spot"
+        android:title="Nuevo"
+        />
+    <item android:id="@+id/adds"
+        android:icon="@drawable/icon_adds"
+        android:title="Adds"
+        />
+    <item android:id="@+id/store"
+        android:icon="@drawable/icon_shop"
+        android:title="SHOP"
+        />
+</menu>
