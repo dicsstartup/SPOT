@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".app.home.MapsFragment">
+
+
+    <Button
+        android:id="@+id/GoogleSearchButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_edit"
+        android:backgroundTint="@color/negro"
+        map:icon="@drawable/googleg_standard_color_18"
+        map:iconGravity="start"
+        map:iconTint="@color/negro"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <fragment
+        android:id="@+id/add_maps_Fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        map:cameraZoom="10"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="1.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.0"
+        map:uiRotateGestures="true"
+        map:uiZoomControls="true"
+        tools:layout="@layout/lists_spot" />
+
+    <Button
+        android:id="@+id/maps_button_mylocation"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/background_btn_green"
+        android:paddingRight="8dp"
+        android:translationX="-45dp"
+        android:translationY="100dp"
+        map:icon="@mipmap/ic_my_location_button"
+        map:iconGravity="end"
+        map:iconPadding="4dp"
+        map:iconTint="@color/negro"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="@+id/add_maps_Fragment"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/maps_busqueda"
+        android:layout_width="100dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_btn_green"
+        android:paddingRight="8dp"
+        android:translationX="-45dp"
+        android:translationY="100dp"
+        map:icon="@mipmap/ic_search"
+        map:iconGravity="end"
+        map:iconPadding="4dp"
+        map:iconTint="@color/negro"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/maps_button_mylocation"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/containerSpot"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent">
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSearch"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:visibility="visible"
+        android:backgroundTint="@color/white"
+        map:cardCornerRadius="20dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="@+id/add_maps_Fragment">
+
+        <fragment
+            android:id="@+id/autocomplete_activity"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_edit_comentarios"
+            android:backgroundTint="@color/negro"
+            tools:layout="@layout/activity_add_spot_inicial" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

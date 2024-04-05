@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    tools:context=".app.usuario.EditUsuarioActivity">
+
+    <ImageView
+        android:id="@+id/closeEdit"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/quantum_ic_clear_grey600_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="68dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/des"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/logo" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/edit_avatar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Theme.AppSpot.ImageViewShapeAppearanceOverlay"
+        tools:ignore="ContentDescription,ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/edit_err"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="32dp"
+        android:clickable="false"
+        android:focusable="true"
+        android:textColor="@color/colorSpinnerBackground"
+        android:textColorHighlight="#A9F2C12E"
+        android:textColorHint="@color/negro"
+        android:textColorLink="@color/amarillo"
+        app:layout_constraintStart_toStartOf="@+id/edit_nick"
+        app:layout_constraintTop_toBottomOf="@+id/edit_cambiarAvatar"
+        tools:ignore="HardcodedText,TextContrastCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/edit_nick"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:autoText="true"
+        android:autofillHints=""
+        android:background="@drawable/background_edit"
+        android:elevation="4dp"
+        android:ems="10"
+        android:hint="Nick"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/negro"
+        android:textColorHighlight="#A9F2C12E"
+        android:textColorHint="@color/negro"
+        android:textColorLink="@color/amarillo"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_err"
+        tools:ignore="Deprecated,DuplicateSpeakableTextCheck,HardcodedText,TextFields,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/edit_cambiarAvatar"
+        android:layout_width="135dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/archivonarrow_medium"
+        android:text="Cambia avatar"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_avatar"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="@+id/edit_avatar"
+        app:layout_constraintTop_toBottomOf="@+id/edit_avatar"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="204dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/background_btn_green"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:onClick="onImageRegistrar"
+        android:text="GUARDAR"
+        android:textColor="@color/negro"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_cambiarC"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck,TextContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="33dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_cambiarAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/edit_avatar"
+        app:layout_constraintStart_toEndOf="@+id/edit_cambiarAvatar"
+        app:layout_constraintTop_toTopOf="@+id/edit_cambiarAvatar"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/icon_new_spot" />
+
+    <Button
+        android:id="@+id/edit_cambiarC"
+        android:layout_width="294dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_btn_green"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:text="Cambiar Contraseña"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/edit_nick"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/edit_nick"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nick" />
+</androidx.constraintlayout.widget.ConstraintLayout>

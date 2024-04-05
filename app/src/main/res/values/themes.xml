@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AppSpot" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/amarillo</item>
+        <item name="colorPrimaryVariant">@color/amarillo</item>
+        <item name="colorOnPrimary">@color/amarillo</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/amarillo</item>
+        <item name="colorSecondaryVariant">@color/amarillo</item>
+        <item name="colorOnSecondary">@color/amarillo</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#990D0D0D</item>
+        <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/archivonarrow_medium</item>
+        <item name="android:textColor">@color/amarillo</item>
+    </style>
+    <style name="Theme.AppSpot.ImageViewShapeAppearanceOverlay" >
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+    <style name="MenuItemStyle" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:itemBackground">@drawable/background_edit_comentarios</item>
+        <item name="android:backgroundTint">#17263C</item>
+        <item name="android:fontFamily">@font/archivonarrow_bold</item>
+    </style>
+    <style name="PopupMenuStyle" parent="MenuItemStyle">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:itemBackground">@drawable/background_edit_comentarios</item>
+        <item name="android:backgroundTint">@color/negro</item>
+        <item name="android:fontFamily">@font/archivonarrow_bold</item>
+    </style>
+    <style name="Theme.AppSpot.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.AppSpot.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.AppSpot.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+
+</resources>

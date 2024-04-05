@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background_edit_comentarios"
+    android:backgroundTint="@color/negro"
+    android:theme="@style/PopupMenuStyle"
+    >
+    <item
+        android:id="@+id/option1"
+        android:title="Perfil" />
+    <item
+        android:id="@+id/option2"
+        android:title="Notificaciones"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@drawable/background_edit_comentarios"
+        android:backgroundTint="#17263C"/>
+    <item
+        android:id="@+id/option3"
+        android:title="Mis Reuniones" />
+    <item
+        android:id="@+id/option4"
+        android:title="Me gusta" />
+    <item
+        android:id="@+id/option5"
+        android:title="Cerrar Seccion" />
+</menu>

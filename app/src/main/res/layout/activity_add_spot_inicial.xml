@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutCompat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    tools:context=".app.add.AddSpotActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <TextView
+        android:id="@+id/tituloadd"
+        android:layout_width="160dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/archivonarrow_bold"
+        android:paddingStart="12dp"
+        android:text="Nuevo"
+        android:textColor="@color/colorSpinnerBackground"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,RtlSymmetry,TextSizeCheck"
+        tools:layout_conversion_absoluteHeight="49dp"
+        tools:layout_conversion_absoluteWidth="240dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/searchAPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloadd">
+
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/background_edit"
+            android:backgroundTint="@color/negro"
+            app:icon="@drawable/quantum_ic_clear_grey600_24"
+            app:iconTint="@color/negro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardSearchInicial"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSearchInicial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/white"
+            android:visibility="visible"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <fragment
+                android:id="@+id/autocomplete_activity"
+                android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:ignore="FragmentTagUsage"
+                tools:layout="@layout/lists_spot" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloadd"
+        tools:ignore="MissingConstraints,UselessParent">
+
+
+        <LinearLayout
+            android:id="@+id/information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <Spinner
+                android:id="@+id/add_fragment_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/background_edit"
+                android:backgroundTint="#151515"
+                android:elevation="4dp"
+                android:minHeight="32dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/add_fragment_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_edit"
+                android:backgroundTint="#151515"
+                android:drawableTint="@color/white"
+                android:elevation="4dp"
+                android:ems="10"
+                android:fontFamily="@font/ounded1c_medium"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="#60385C19"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/add_fragment_ciudad"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_edit"
+                android:backgroundTint="#151515"
+
+                android:drawableEnd="@drawable/icon_search"
+                android:drawablePadding="30dp"
+                android:drawableTint="@color/white"
+                android:elevation="4dp"
+                android:ems="10"
+                android:fontFamily="@font/ounded1c_medium"
+                android:hint="Cuidad"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:textColorHighlight="#60385C19"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/add_fragment_comentarios"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/background_edit_comentarios"
+                android:backgroundTint="#151515"
+                android:elevation="4dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Comentarios"
+                android:inputType="textMultiLine"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                tools:ignore="Autofill,HardcodedText,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+            <EditText
+                android:id="@+id/add_fragment_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/background_edit"
+                android:backgroundTint="#151515"
+                android:elevation="4dp"
+                android:ems="10"
+                android:fontFamily="@font/ounded1c_medium"
+                android:hint="Tags"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="15dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/colorSpinnerBackground"
+                android:textColorHighlight="#60385C19"
+                android:textColorHint="@color/colorSpinnerBackground"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/ounded1c_bold"
+                android:text="Añadir Imagenes"
+                android:textColor="@color/amarillo"
+                android:textSize="24sp"
+                tools:ignore="HardcodedText,TextContrastCheck" />
+
+            <ImageView
+                android:id="@+id/add_image_button"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:elevation="4dp"
+                android:src="@drawable/icon_new_spot"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:background="#151515"
+            android:elevation="10dp"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="5dp"
+            tools:ignore="RtlHardcoded" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_next_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/background_btn_green"
+        android:fontFamily="@font/ounded1c_extrabold"
+        android:text="Siguiente"
+        android:textColor="@color/negro"
+        android:textSize="24sp"
+        app:icon="@drawable/baseline_navigate_next_24"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.816"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
